@@ -16,13 +16,20 @@ var guesses = 10;
 // the win counter increase by 1 
 document.onkeypress = function(event) {
     var userGuess = event.key;
-
+    // need to add userGuess to previousGuesses
 
     if (userGuess === computerChoice) {
-        MessageChannel.textContent = "You win!";
+        message.textContent = "You win!";
         wins++;
     } else {
+        // if they guess wrong guesses decrease by 1
         guesses--;
+    }
+    // if you run out of guesses, computer wins 
+    if (guesses === 0) {
+        message.textContent = "Computer wins!";
+        // losses increase by 1 
+        losses++;
     }
 }
 
