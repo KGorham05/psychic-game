@@ -1,7 +1,12 @@
 body {
-    background-color: royalblue;
+    background-color: #4ABDAC;
 }
 
 .container {
-    background-color: lightgreen;
+    background-color: #FC4A1A;
+}
+
+.main-game {
+    padding:30px;
+    margin:30px;
 }

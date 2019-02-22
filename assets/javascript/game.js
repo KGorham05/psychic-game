@@ -38,6 +38,10 @@ document.onkeyup = function (event) {
         // not sure about the code below
         alert("You win!");
         wins++;
+        guesses = 10;
+        computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
+        console.log(computerChoice);
+        guessedLetters = [];
     } else {
         // if they guess wrong guesses decrease by 1
         guesses--;
@@ -47,7 +51,11 @@ document.onkeyup = function (event) {
         alert("Computer wins!");
         // losses increase by 1 
         losses++;
-    }
+        guesses = 10;
+        computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
+        console.log(computerChoice);
+        guessedLetters = [];
+    }   
 
     // Record information to the scoreboard 
     winsText.textContent = "Wins: " + wins;
